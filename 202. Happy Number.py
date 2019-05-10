@@ -33,4 +33,4 @@ def isHappy(n: int) -> bool:
     return True
 
 
-print(isHappy(19))
+print(isHappy(15))
