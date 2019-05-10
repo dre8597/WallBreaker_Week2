@@ -14,10 +14,21 @@ Output: 0
 """
 
 
-def numJewelsInStones(J: str, S: str) -> int:
+# Runtime of 48ms and O(n^2)
+def numJewelsInStones_unoptimized(J: str, S: str) -> int:
     count = 0
-    for i in J:
-        for k in S:
+    for i in J:  # O(n)
+        for k in S:  # O(n)
             if i == k:
                 count += 1
+    return count
+
+
+# Runtime of 40ms and O(n)
+def numJewelsInStones_optimized(J: str, S: str) -> int:
+    jewels = set(J)  # O(1) operations
+    count = 0
+    for i in S:  # O(n) operation
+        if i in jewels:
+            count += 1
     return count
