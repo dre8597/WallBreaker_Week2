@@ -15,22 +15,22 @@ Explanation:
 """
 
 
-# TODO needs a check for duplicate
 def isHappy(n: int) -> bool:
     running = 0
     seen = set()
-    if set(str(n))==str(n):
-        while n != 1:
-            for i in set(str(n)):
-                running += int(i) * int(i)
-                n = running
-                if n in seen:
-                    return False
-            seen.add(n)
-            running = 0
-        return True
-    else:
-        return False
+    while running != 1:
+        for i in str(n):
+            running += int(i) * int(i)
+        if running == 1:
+            return True
+        elif running in seen:
+            print(running, seen)
+            return False
+        else:
+            seen.add(running)
+        n = running
+        running = 0
+    return True
 
 
-print(isHappy(11))
+print(isHappy(19))
