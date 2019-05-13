@@ -14,6 +14,7 @@ Note:
 Each element in the result must be unique.
 The result can be in any order.
 
+Runtime: 36 ms, faster than 99.34% of Python3 online submissions for Intersection of Two Arrays.
 """
 
 
